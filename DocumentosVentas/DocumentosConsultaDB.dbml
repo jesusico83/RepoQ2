@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="local" Class="DocumentosConsultaDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=INFORMATICA02\SQLSRV2008;Initial Catalog=local;Integrated Security=True" SettingsObjectName="DocumentosVentas.Properties.Settings" SettingsPropertyName="localConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.DOCUMENTOS_CON_TIPOS" Method="DOCUMENTOS_CON_TIPOS">
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="TIDOC_ID" Parameter="tIDOC_ID" Type="System.String" DbType="VarChar(6)" />
+    <ElementType Name="DOCUMENTOS_CON_TIPOSResult">
+      <Column Name="TIDOC_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="DOCU_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="DOCU_DESCRIPCION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

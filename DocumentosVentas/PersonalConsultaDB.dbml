@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="local" Class="PersonalConsultaDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=INFORMATICA02\SQLSRV2008;Initial Catalog=local;Integrated Security=True" SettingsObjectName="DocumentosVentas.Properties.Settings" SettingsPropertyName="localConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.PERSONAL_CON_Q2" Method="PERSONAL_CON_Q2">
+    <Parameter Name="PERS_NOMBRE" Parameter="pERS_NOMBRE" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="PERSONAL_CON_Q2Result">
+      <Column Name="PERS_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

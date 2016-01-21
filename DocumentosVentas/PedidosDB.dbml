@@ -1,0 +1,885 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="local" Class="PedidosDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=INFORMATICA02\SQLSRV2008;Initial Catalog=local;Integrated Security=True" SettingsObjectName="DocumentosVentas.Properties.Settings" SettingsPropertyName="localConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PEDIDOSV" Member="PEDIDOSV">
+    <Type Name="PEDIDOSV">
+      <Column Name="DOCU_ID" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PEDID_ID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CLIE_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_ID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_ID2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_ID3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_SUREFERENCIA" Type="System.String" DbType="VarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_FECHA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_FECHAP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_FECHAM" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PEDID_FECHAPG" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ALMA_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="PERS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PERS_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ESTDOC_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="GRDE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IRPF_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PEDID_RECFIN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MONEDA_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="FPAGO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_ENTIDAD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_DIRPAGO" Type="System.String" DbType="VarChar(65) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_BANCO" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_SUCURSAL" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_DC" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_CC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TIPORT_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_ENTREGA" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_ANOTACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CLIEGF_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="HORA_AVISO" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_B" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="FECHA_IMPRESION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AGENTE_EXTERNO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AGENTE_INTERNO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REPRE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="APLICA_PRECIO_MEDIADOR" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Association Name="PEDIDOSV_REGISTROLAB" Member="REGISTROLAB" ThisKey="DOCU_ID,PEDID_ID" OtherKey="DOCU_ID_ORIGEN,DOCU_NUMERO_ORIGEN" Type="REGISTROLAB" />
+      <Association Name="CLIENTES_PEDIDOSV" Member="CLIENTES" ThisKey="CLIE_ID" OtherKey="CLIE_ID" Type="CLIENTES" IsForeignKey="true" />
+      <Association Name="CLIENTES_PEDIDOSV1" Member="CLIENTES1" ThisKey="CLIE_ID1" OtherKey="CLIE_ID" Type="CLIENTES" IsForeignKey="true" />
+      <Association Name="CLIENTES_PEDIDOSV2" Member="CLIENTES2" ThisKey="CLIE_ID2" OtherKey="CLIE_ID" Type="CLIENTES" IsForeignKey="true" />
+      <Association Name="CLIENTES_PEDIDOSV3" Member="CLIENTES3" ThisKey="CLIE_ID3" OtherKey="CLIE_ID" Type="CLIENTES" IsForeignKey="true" />
+      <Association Name="PERSONAL_PEDIDOSV" Member="PERSONAL" ThisKey="PERS_ID" OtherKey="PERS_ID" Type="PERSONAL" IsForeignKey="true" />
+      <Association Name="PERSONAL_PEDIDOSV1" Member="PERSONAL1" ThisKey="PERS_ID1" OtherKey="PERS_ID" Type="PERSONAL" IsForeignKey="true" />
+      <Association Name="PERSONAL_PEDIDOSV2" Member="PERSONAL2" ThisKey="AGENTE_EXTERNO" OtherKey="PERS_ID" Type="PERSONAL" IsForeignKey="true" />
+      <Association Name="PERSONAL_PEDIDOSV3" Member="PERSONAL3" ThisKey="AGENTE_INTERNO" OtherKey="PERS_ID" Type="PERSONAL" IsForeignKey="true" />
+      <Association Name="MONEDAS_PEDIDOSV" Member="MONEDAS" ThisKey="MONEDA_ID" OtherKey="MONEDA_ID" Type="MONEDAS" IsForeignKey="true" />
+      <Association Name="FORMAS_PAGO_PEDIDOSV" Member="FORMAS_PAGO" ThisKey="FPAGO_ID" OtherKey="FPAGO_ID" Type="FORMAS_PAGO" IsForeignKey="true" />
+      <Association Name="TIPOS_PORTE_PEDIDOSV" Member="TIPOS_PORTE" ThisKey="TIPORT_ID" OtherKey="TIPORT_ID" Type="TIPOS_PORTE" IsForeignKey="true" />
+      <Association Name="ARTICULOS_PEDIDOSV" Member="ARTICULOS" ThisKey="ARTI_ID" OtherKey="ARTI_ID" Type="ARTICULOS" IsForeignKey="true" />
+      <Association Name="DOCUMENTOS_ESTADOS_PEDIDOSV" Member="DOCUMENTOS_ESTADOS" ThisKey="DOCU_ID,ESTDOC_ID" OtherKey="DOCU_ID,ESTDOC_ID" Type="DOCUMENTOS_ESTADOS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CLIENTES" Member="CLIENTES">
+    <Type Name="CLIENTES">
+      <Column Name="CLIE_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CLIE_DESCRIPCION" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_RAZONSOCIAL" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_NIF" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DIRECCION" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_CP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_POBLACION" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_PROVINCIA" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="PAIS_ID" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_TELEFONO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_TELEFONO1" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_MOVIL" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_FAX" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_EMAIL" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_WEB" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_EAN" Type="System.String" DbType="VarChar(28) NOT NULL" CanBeNull="false" />
+      <Column Name="TICLI_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GRCU_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ESTAR_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="TIFAC_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDIOMA_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="MONEDA_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="GRDE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLIE_RECFIN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IRPF_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FPAGO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BANC_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLIE_ENTIDAD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DIRPAGO" Type="System.String" DbType="VarChar(65) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_BANCO" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_SUCURSAL" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DC" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_CC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DIASDP" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_RIESGO" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TIRI_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="TIPORT_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="CLIE_ENTREGA" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_ANOTACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CLIE_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLIE_ID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ZONA_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="RUTA_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="CLIE_DIA1" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DIA2" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DIA3" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DIA4" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="TARF_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PERFCL_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TIOP_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="CLIE_FECHAALTA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CLIE_FECHABAJA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MOTIVOS_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="IMPRIMIR_INFORMES" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="AGENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLIE_DIRECCION_ENTREGA" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_CP_ENTREGA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_POBLACION_ENTREGA" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_PROVINCIA_ENTREGA" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="PAIS_ID_ENTREGA" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_TELEFONO_ENTREGA" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_TELEFONO1_ENTREGA" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_MOVIL_ENTREGA" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_FAX_ENTREGA" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_EMAIL_ENTREGA" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_WEB_ENTREGA" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_IBAN" Type="System.String" DbType="VarChar(34)" CanBeNull="true" />
+      <Column Name="PROVINCIA_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AGENTE_INTERNO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SUPERVISOR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PERIODICIDAD_ACTUACIONES" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_LUNES" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_MARTES" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_MIERCOLES" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_JUEVES" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_VIERNES" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_SABADO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_DOMINGO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ASUNTO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ESTACIONAL_ENERO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_FEBRERO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_MARZO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_ABRIL" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_MAYO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_JUNIO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_JULIO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_AGOSTO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_SEPTIEMBRE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_OCTUBRE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_NOVIEMBRE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_DICIEMBRE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CLIENTES_PEDIDOSV" Member="PEDIDOSV" ThisKey="CLIE_ID" OtherKey="CLIE_ID" Type="PEDIDOSV" />
+      <Association Name="CLIENTES_PEDIDOSV1" Member="PEDIDOSV1" ThisKey="CLIE_ID" OtherKey="CLIE_ID1" Type="PEDIDOSV" />
+      <Association Name="CLIENTES_PEDIDOSV2" Member="PEDIDOSV2" ThisKey="CLIE_ID" OtherKey="CLIE_ID2" Type="PEDIDOSV" />
+      <Association Name="CLIENTES_PEDIDOSV3" Member="PEDIDOSV3" ThisKey="CLIE_ID" OtherKey="CLIE_ID3" Type="PEDIDOSV" />
+      <Association Name="CLIENTES_CLIENTES" Member="CLIENTES2" ThisKey="CLIE_ID" OtherKey="CLIE_ID1" Type="CLIENTES" />
+      <Association Name="CLIENTES_CLIENTES1" Member="CLIENTES4" ThisKey="CLIE_ID" OtherKey="CLIE_ID2" Type="CLIENTES" />
+      <Association Name="CLIENTES_CLIENTE_BLOQUEO" Member="CLIENTE_BLOQUEO" ThisKey="CLIE_ID" OtherKey="CLIE_ID" Type="CLIENTE_BLOQUEO" Cardinality="One" />
+      <Association Name="CLIENTES_REGISTROLAB" Member="REGISTROLAB" ThisKey="CLIE_ID" OtherKey="CLIE_ID" Type="REGISTROLAB" />
+      <Association Name="CLIENTES_CLIENTES" Member="CLIENTES1" ThisKey="CLIE_ID1" OtherKey="CLIE_ID" Type="CLIENTES" IsForeignKey="true" />
+      <Association Name="CLIENTES_CLIENTES1" Member="CLIENTES3" ThisKey="CLIE_ID2" OtherKey="CLIE_ID" Type="CLIENTES" IsForeignKey="true" />
+      <Association Name="PERSONAL_CLIENTES" Member="PERSONAL" ThisKey="AGENTE" OtherKey="PERS_ID" Type="PERSONAL" IsForeignKey="true" />
+      <Association Name="PERSONAL_CLIENTES1" Member="PERSONAL1" ThisKey="AGENTE_INTERNO" OtherKey="PERS_ID" Type="PERSONAL" IsForeignKey="true" />
+      <Association Name="PERSONAL_CLIENTES2" Member="PERSONAL2" ThisKey="SUPERVISOR" OtherKey="PERS_ID" Type="PERSONAL" IsForeignKey="true" />
+      <Association Name="MONEDAS_CLIENTES" Member="MONEDAS" ThisKey="MONEDA_ID" OtherKey="MONEDA_ID" Type="MONEDAS" IsForeignKey="true" />
+      <Association Name="FORMAS_PAGO_CLIENTES" Member="FORMAS_PAGO" ThisKey="FPAGO_ID" OtherKey="FPAGO_ID" Type="FORMAS_PAGO" IsForeignKey="true" />
+      <Association Name="TIPOS_PORTE_CLIENTES" Member="TIPOS_PORTE" ThisKey="TIPORT_ID" OtherKey="TIPORT_ID" Type="TIPOS_PORTE" IsForeignKey="true" />
+      <Association Name="PAISES_CLIENTES" Member="PAISES" ThisKey="PAIS_ID" OtherKey="PAIS_ID" Type="PAISES" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PERSONAL" Member="PERSONAL">
+    <Type Name="PERSONAL">
+      <Column Name="PERS_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PERS_NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_FECHAALTA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_FECHABAJA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_DNI" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_DOMICILIO" Type="System.String" DbType="VarChar(65) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_CP" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_LOCALIDAD" Type="System.String" DbType="VarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_PROVINCIA" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_TELEFONO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_TELEFONO2" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_MOVIL" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_EMAIL" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_ENTIDAD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_BANCO" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_SUCURSAL" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_DC" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_CC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_FIRMADIGITAL" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_TITULACION" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_CURRICULUM" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="USU_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="FPAGO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PERS_DIRPAGO" Type="System.String" DbType="VarChar(65) NOT NULL" CanBeNull="false" />
+      <Column Name="PAIS_ID" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="MONEDA_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="GRCU_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_ANOTACIONES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="PERSONAL_PEDIDOSV" Member="PEDIDOSV" ThisKey="PERS_ID" OtherKey="PERS_ID" Type="PEDIDOSV" />
+      <Association Name="PERSONAL_PEDIDOSV1" Member="PEDIDOSV1" ThisKey="PERS_ID" OtherKey="PERS_ID1" Type="PEDIDOSV" />
+      <Association Name="PERSONAL_PEDIDOSV2" Member="PEDIDOSV2" ThisKey="PERS_ID" OtherKey="AGENTE_EXTERNO" Type="PEDIDOSV" />
+      <Association Name="PERSONAL_PEDIDOSV3" Member="PEDIDOSV3" ThisKey="PERS_ID" OtherKey="AGENTE_INTERNO" Type="PEDIDOSV" />
+      <Association Name="PERSONAL_CLIENTES" Member="CLIENTES" ThisKey="PERS_ID" OtherKey="AGENTE" Type="CLIENTES" />
+      <Association Name="PERSONAL_CLIENTES1" Member="CLIENTES1" ThisKey="PERS_ID" OtherKey="AGENTE_INTERNO" Type="CLIENTES" />
+      <Association Name="PERSONAL_CLIENTES2" Member="CLIENTES2" ThisKey="PERS_ID" OtherKey="SUPERVISOR" Type="CLIENTES" />
+      <Association Name="PERSONAL_REGISTROLAB" Member="REGISTROLAB" ThisKey="PERS_ID" OtherKey="REGLAB_PERSONAENTRADA" Type="REGISTROLAB" />
+      <Association Name="PERSONAL_REGISTROLAB1" Member="REGISTROLAB1" ThisKey="PERS_ID" OtherKey="MUESTREADOR_PERS_ID" Type="REGISTROLAB" />
+      <Association Name="PERSONAL_REGISTROLAB2" Member="REGISTROLAB2" ThisKey="PERS_ID" OtherKey="RECOGEDOR_PERS_ID" Type="REGISTROLAB" />
+      <Association Name="MONEDAS_PERSONAL" Member="MONEDAS" ThisKey="MONEDA_ID" OtherKey="MONEDA_ID" Type="MONEDAS" IsForeignKey="true" />
+      <Association Name="FORMAS_PAGO_PERSONAL" Member="FORMAS_PAGO" ThisKey="FPAGO_ID" OtherKey="FPAGO_ID" Type="FORMAS_PAGO" IsForeignKey="true" />
+      <Association Name="PAISES_PERSONAL" Member="PAISES" ThisKey="PAIS_ID" OtherKey="PAIS_ID" Type="PAISES" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MONEDAS" Member="MONEDAS">
+    <Type Name="MONEDAS">
+      <Column Name="MONEDA_ID" Type="System.String" DbType="VarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MONEDA_DESCRIPCION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MONEDA_SIMBOLO" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Association Name="MONEDAS_PEDIDOSV" Member="PEDIDOSV" ThisKey="MONEDA_ID" OtherKey="MONEDA_ID" Type="PEDIDOSV" />
+      <Association Name="MONEDAS_CLIENTES" Member="CLIENTES" ThisKey="MONEDA_ID" OtherKey="MONEDA_ID" Type="CLIENTES" />
+      <Association Name="MONEDAS_PERSONAL" Member="PERSONAL" ThisKey="MONEDA_ID" OtherKey="MONEDA_ID" Type="PERSONAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FORMAS_PAGO" Member="FORMAS_PAGO">
+    <Type Name="FORMAS_PAGO">
+      <Column Name="FPAGO_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FPAGO_DESCRIPCION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FPAGO_CALCULO" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Association Name="FORMAS_PAGO_PEDIDOSV" Member="PEDIDOSV" ThisKey="FPAGO_ID" OtherKey="FPAGO_ID" Type="PEDIDOSV" />
+      <Association Name="FORMAS_PAGO_CLIENTES" Member="CLIENTES" ThisKey="FPAGO_ID" OtherKey="FPAGO_ID" Type="CLIENTES" />
+      <Association Name="FORMAS_PAGO_PERSONAL" Member="PERSONAL" ThisKey="FPAGO_ID" OtherKey="FPAGO_ID" Type="PERSONAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPOS_PORTE" Member="TIPOS_PORTE">
+    <Type Name="TIPOS_PORTE">
+      <Column Name="TIPORT_ID" Type="System.String" DbType="VarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TIPORT_DESCRIPCION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TIPOS_PORTE_PEDIDOSV" Member="PEDIDOSV" ThisKey="TIPORT_ID" OtherKey="TIPORT_ID" Type="PEDIDOSV" />
+      <Association Name="TIPOS_PORTE_CLIENTES" Member="CLIENTES" ThisKey="TIPORT_ID" OtherKey="TIPORT_ID" Type="CLIENTES" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ARTICULOS" Member="ARTICULOS">
+    <Type Name="ARTICULOS">
+      <Column Name="ARTI_ID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ARTI_DESCRIPCION" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="FAMIL_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SUBFA_ID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ARTI_EAN" Type="System.String" DbType="VarChar(28) NOT NULL" CanBeNull="false" />
+      <Column Name="COMP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ARTI_CONTROLE" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_COMISION" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="TIABC_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="TIPAR_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="UBIC_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ESTAR_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="GRCU_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ARTI_PRME" Type="System.Decimal" DbType="Decimal(12,5) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_PRUC" Type="System.Decimal" DbType="Decimal(12,5) NOT NULL" CanBeNull="false" />
+      <Column Name="UNID_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="UNID_ID1" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="ARTI_PESOB" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_PESON" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="UNID_ID2" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="VOLUMEN" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="UNID_ID3" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="ARTI_LARGO" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ALTO" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ANCHO" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_FECHAC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_FECHAM" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_VIDAUTIL" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_PORCAMORT" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_VALORCOMPRA" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_VALORRESIDUAL" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_TIPOAMORTIZACION" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ANOTACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PROVE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ARTI_REFPROVE" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="TIPRE_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ARTI_ANOTACIONRES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ARTI_FRASER" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_FRASES" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_FECHAALTA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_FECHABAJA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ARTI_DETERMINACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ARTI_PNT_METODOLOGIA" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ARTICULOS_PEDIDOSV" Member="PEDIDOSV" ThisKey="ARTI_ID" OtherKey="ARTI_ID" Type="PEDIDOSV" />
+      <Association Name="ARTICULOS_REGISTROLAB" Member="REGISTROLAB" ThisKey="ARTI_ID1" OtherKey="ARTI_ID1" Type="REGISTROLAB" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAISES" Member="PAISES">
+    <Type Name="PAISES">
+      <Column Name="PAIS_ID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PAIS_DESCRIPCION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PAISES_CLIENTES" Member="CLIENTES" ThisKey="PAIS_ID" OtherKey="PAIS_ID" Type="CLIENTES" />
+      <Association Name="PAISES_PERSONAL" Member="PERSONAL" ThisKey="PAIS_ID" OtherKey="PAIS_ID" Type="PERSONAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DOCUMENTOS_ESTADOS" Member="DOCUMENTOS_ESTADOS">
+    <Type Name="DOCUMENTOS_ESTADOS">
+      <Column Name="DOCU_ID" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ESTDOC_ID" Type="System.String" DbType="VarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DOCU_NUEVO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TARE_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="DOCUES_ELIMTAREA" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ESQC_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="TICU_ID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DPI_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DOCUMENTOS_ESTADOS_PEDIDOSV" Member="PEDIDOSV" ThisKey="DOCU_ID,ESTDOC_ID" OtherKey="DOCU_ID,ESTDOC_ID" Type="PEDIDOSV" />
+      <Association Name="DOCUMENTOS_ESTADOS_REGISTROLAB" Member="REGISTROLAB" ThisKey="DOCU_ID,ESTDOC_ID" OtherKey="DOCU_ID,ESTDOC_ID" Type="REGISTROLAB" />
+      <Association Name="DOCUMENTOS_DOCUMENTOS_ESTADOS" Member="DOCUMENTOS" ThisKey="DOCU_ID" OtherKey="DOCU_ID" Type="DOCUMENTOS" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CLIENTE_BLOQUEO" Member="CLIENTE_BLOQUEO">
+    <Type Name="CLIENTE_BLOQUEO">
+      <Column Name="CLIE_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PRPV" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PRPV_GRUPO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ACTA" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ACTA_GRUPO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RLAB" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RLAB_GRUPO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="COM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="COM_GRUPO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PRPV_MOTIVO" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="ACTA_MOTIVO" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="RLAB_MOTIVO" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="COM_MOTIVO" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Association Name="CLIENTES_CLIENTE_BLOQUEO" Member="CLIENTES" ThisKey="CLIE_ID" OtherKey="CLIE_ID" Type="CLIENTES" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REGISTROLAB" Member="REGISTROLAB">
+    <Type Name="REGISTROLAB">
+      <Column Name="DOCU_ID" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="REGLAB_ID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ESTDOC_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="REGLAB_FECHA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DOCU_ID_ORIGEN" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="DOCU_NUMERO_ORIGEN" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="REGLAB_XML" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REGLAB_ANOTACIONES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SUREFERENCIA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CLIE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NIVURG_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REGLAB_HORA" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="REGLAB_FECHAMUESTREO" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="REGLAB_HORAMUESTREO" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="REGLAB_FECHAMAXIMA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="REGLAB_EMPRESAMUESTREO" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="REGLAB_MUESTREADOR" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REGLAB_HORAMAXIMA" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="REGLAB_FECHARECOGIDA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="REGLAB_RECOGEDOR" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REGLAB_HORARECOGIDA" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="REGLAB_EMPRESARECOGIDA" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="REGLAB_PERSONAENTRADA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MUESTRA_DESCRIPCION" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="MUESTRA_REF1" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="MUESTRA_REF2" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="MUESTRA_REF3" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="MUESTRA_OBSERVACIONES" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MUESTREADOR_PERS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RECOGEDOR_PERS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ARTICULOS_REGISTROLAB" Member="ARTICULOS" ThisKey="ARTI_ID1" OtherKey="ARTI_ID1" Type="ARTICULOS" IsForeignKey="true" />
+      <Association Name="CLIENTES_REGISTROLAB" Member="CLIENTES" ThisKey="CLIE_ID" OtherKey="CLIE_ID" Type="CLIENTES" IsForeignKey="true" />
+      <Association Name="DOCUMENTOS_ESTADOS_REGISTROLAB" Member="DOCUMENTOS_ESTADOS" ThisKey="DOCU_ID,ESTDOC_ID" OtherKey="DOCU_ID,ESTDOC_ID" Type="DOCUMENTOS_ESTADOS" IsForeignKey="true" />
+      <Association Name="PEDIDOSV_REGISTROLAB" Member="PEDIDOSV" ThisKey="DOCU_ID_ORIGEN,DOCU_NUMERO_ORIGEN" OtherKey="DOCU_ID,PEDID_ID" Type="PEDIDOSV" IsForeignKey="true" />
+      <Association Name="PERSONAL_REGISTROLAB" Member="PERSONAL" ThisKey="REGLAB_PERSONAENTRADA" OtherKey="PERS_ID" Type="PERSONAL" IsForeignKey="true" />
+      <Association Name="PERSONAL_REGISTROLAB1" Member="PERSONAL1" ThisKey="MUESTREADOR_PERS_ID" OtherKey="PERS_ID" Type="PERSONAL" IsForeignKey="true" />
+      <Association Name="PERSONAL_REGISTROLAB2" Member="PERSONAL2" ThisKey="RECOGEDOR_PERS_ID" OtherKey="PERS_ID" Type="PERSONAL" IsForeignKey="true" />
+      <Association Name="NIVEL_URGENCIA_REGISTROLAB" Member="NIVEL_URGENCIA" ThisKey="NIVURG_ID" OtherKey="NIVURG_ID" Type="NIVEL_URGENCIA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USUARIOS" Member="USUARIOS">
+    <Type Name="USUARIOS">
+      <Column Name="USU_ID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USU_DESCRIPCION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PESE_ID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="USU_PWD" Type="System.String" DbType="VarChar(28) NOT NULL" CanBeNull="false" />
+      <Column Name="USU_ACTIVO" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="USU_ID1" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="USU_DIRECCION_CORREO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USU_USUARIO_CORREO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="USU_CONTRASENA_CORREO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="USU_FIRMA_CORREO" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="USU_FIRMA" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DOCUMENTOS" Member="DOCUMENTOS">
+    <Type Name="DOCUMENTOS">
+      <Column Name="DOCU_ID" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DOCU_DESCRIPCION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TIDOC_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="DOCU_INCLINEAS" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DOCU_INCSUBLINEAS" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="CONT_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PREC_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="PROG_ID" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="LIIV_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="DOPA_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="LIDO_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="ESTDOC_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="DOCU_NUEVO" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="COCON_DEBE_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="COCON_HABER_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="TICU_COBROPAGO_ID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="DOCUMENTOS_DOCUMENTOS_ESTADOS" Member="DOCUMENTOS_ESTADOS" ThisKey="DOCU_ID" OtherKey="DOCU_ID" Type="DOCUMENTOS_ESTADOS" />
+      <Association Name="DOCUMENTOS_DOCUMENTOS" Member="DOCUMENTOS2" ThisKey="DOCU_ID" OtherKey="DOCU_ID" Type="DOCUMENTOS" Cardinality="One" />
+      <Association Name="DOCUMENTOS_DOCUMENTOS" Member="DOCUMENTOS1" ThisKey="DOCU_ID" OtherKey="DOCU_ID" Type="DOCUMENTOS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NIVEL_URGENCIA" Member="NIVEL_URGENCIA">
+    <Type Name="NIVEL_URGENCIA">
+      <Column Name="NIVURG_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NIVURG_DESCRIPCION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NIVURG_DIAS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="NIVEL_URGENCIA_REGISTROLAB" Member="REGISTROLAB" ThisKey="NIVURG_ID" OtherKey="NIVURG_ID" Type="REGISTROLAB" />
+    </Type>
+  </Table>
+  <Function Name="dbo.PEDIDOSV_SEL" Method="PEDIDOSV_SEL">
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDID_ID" Parameter="pEDID_ID" Type="System.String" DbType="VarChar(15)" />
+    <ElementType Name="PEDIDOSV_SELResult">
+      <Column Name="DOCU_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_ID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_ID2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_ID3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_SUREFERENCIA" Type="System.String" DbType="VarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_FECHA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_FECHAP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_FECHAM" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PEDID_FECHAPG" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ALMA_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="PERS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PERS_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ESTDOC_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="GRDE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IRPF_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PEDID_RECFIN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MONEDA_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="FPAGO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_ENTIDAD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_DIRPAGO" Type="System.String" DbType="VarChar(65) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_BANCO" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_SUCURSAL" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_DC" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_CC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TIPORT_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_ENTREGA" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_ANOTACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CLIEGF_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="HORA_AVISO" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PERS_NOMBRE1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOCU_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ESTDOC_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOCUD_NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOCUD_RAZONSOCIAL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOCUD_NIF" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DOCUD_DIRECCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOCUD_CP" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="DOCUD_POBLACION" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="DOCUD_PROVINCIA" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="PAIS_ID" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="DOCUD_TELEFONO" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DOCUD_TELEFONO1" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DOCUD_MOVIL" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DOCUD_EMAIL" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="DOCUD_WEB" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="DOCUD_EAN" Type="System.String" DbType="VarChar(28)" CanBeNull="true" />
+      <Column Name="PAIS_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GRDE_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IRPF_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GRDE_DESCRIPCION1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MONEDA_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FPAGO_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIPORT_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CLIE_DESCRIPCION1" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="CLIE_DESCRIPCION2" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="CLIE_DESCRIPCION3" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="PEDID_B" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ARTI_DESCRIPCION" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TIPANA_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="REGLAB_ID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="REGLAB_DOCU_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="AGENTE_EXTERNO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AGENTE_EXTERNO_NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AGENTE_INTERNO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AGENTE_INTERNO_NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="REPRE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MEDIA_SIEMPRE" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="REPRE_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="APLICA_PRECIO_MEDIADOR" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="REPRE_CLIE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PEDIDOSV_CON_Q2" Method="PEDIDOSV_CON_Q2">
+    <Parameter Name="CLIE_ID" Parameter="cLIE_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FECHAD" Parameter="fECHAD" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="FECHAH" Parameter="fECHAH" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ESTDOC_ID" Parameter="eSTDOC_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="PERS_ID1" Parameter="pERS_ID1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MAX" Parameter="mAX" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="PEDIDOSV_CON_Q2Result">
+      <Column Name="PEDID_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_FECHA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DESCRIPCION" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ESTDOC_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="PERS_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PERS_NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PEDIDOSV_UPD" Method="PEDIDOSV_UPD">
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDID_ID" Parameter="pEDID_ID" Type="System.String" DbType="VarChar(15)" Direction="InOut" />
+    <Parameter Name="PEDID_SUREFERENCIA" Parameter="pEDID_SUREFERENCIA" Type="System.String" DbType="VarChar(35)" />
+    <Parameter Name="CLIE_ID" Parameter="cLIE_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CLIE_ID1" Parameter="cLIE_ID1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CLIE_ID2" Parameter="cLIE_ID2" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CLIE_ID3" Parameter="cLIE_ID3" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDID_FECHA" Parameter="pEDID_FECHA" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PEDID_FECHAP" Parameter="pEDID_FECHAP" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PEDID_FECHAM" Parameter="pEDID_FECHAM" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PEDID_FECHAPG" Parameter="pEDID_FECHAPG" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ALMA_ID" Parameter="aLMA_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PERS_ID" Parameter="pERS_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PERS_ID1" Parameter="pERS_ID1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ESTDOC_ID" Parameter="eSTDOC_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="GRDE_ID" Parameter="gRDE_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IRPF_ID" Parameter="iRPF_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDID_RECFIN" Parameter="pEDID_RECFIN" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MONEDA_ID" Parameter="mONEDA_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="FPAGO_ID" Parameter="fPAGO_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDID_ENTIDAD" Parameter="pEDID_ENTIDAD" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PEDID_DIRPAGO" Parameter="pEDID_DIRPAGO" Type="System.String" DbType="VarChar(65)" />
+    <Parameter Name="PEDID_BANCO" Parameter="pEDID_BANCO" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="PEDID_SUCURSAL" Parameter="pEDID_SUCURSAL" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="PEDID_DC" Parameter="pEDID_DC" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="PEDID_CC" Parameter="pEDID_CC" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="TIPORT_ID" Parameter="tIPORT_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="PEDID_ENTREGA" Parameter="pEDID_ENTREGA" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="PEDID_ANOTACIONES" Parameter="pEDID_ANOTACIONES" Type="System.String" DbType="Text" />
+    <Parameter Name="DOCUD_NOMBRE" Parameter="dOCUD_NOMBRE" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DOCUD_RAZONSOCIAL" Parameter="dOCUD_RAZONSOCIAL" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DOCUD_NIF" Parameter="dOCUD_NIF" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCUD_DIRECCION" Parameter="dOCUD_DIRECCION" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DOCUD_CP" Parameter="dOCUD_CP" Type="System.String" DbType="VarChar(7)" />
+    <Parameter Name="DOCUD_POBLACION" Parameter="dOCUD_POBLACION" Type="System.String" DbType="VarChar(35)" />
+    <Parameter Name="DOCUD_PROVINCIA" Parameter="dOCUD_PROVINCIA" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="PAIS_ID" Parameter="pAIS_ID" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="DOCUD_TELEFONO" Parameter="dOCUD_TELEFONO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCUD_TELEFONO1" Parameter="dOCUD_TELEFONO1" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCUD_MOVIL" Parameter="dOCUD_MOVIL" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCUD_EMAIL" Parameter="dOCUD_EMAIL" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="DOCUD_WEB" Parameter="dOCUD_WEB" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="DOCUD_EAN" Parameter="dOCUD_EAN" Type="System.String" DbType="VarChar(28)" />
+    <Parameter Name="CLIEGF_ID" Parameter="cLIEGF_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="HORA_AVISO" Parameter="hORA_AVISO" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="PEDID_B" Parameter="pEDID_B" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="ARTI_ID" Parameter="aRTI_ID" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="AGENTE_EXTERNO" Parameter="aGENTE_EXTERNO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AGENTE_INTERNO" Parameter="aGENTE_INTERNO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="REPRE_ID" Parameter="rEPRE_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="APLICA_PRECIO_MEDIADOR" Parameter="aPLICA_PRECIO_MEDIADOR" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="XML" Parameter="xML" Type="System.String" DbType="Text" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PEDIDOSV_INS" Method="PEDIDOSV_INS">
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDID_ID" Parameter="pEDID_ID" Type="System.String" DbType="VarChar(15)" Direction="InOut" />
+    <Parameter Name="PEDID_SUREFERENCIA" Parameter="pEDID_SUREFERENCIA" Type="System.String" DbType="VarChar(35)" />
+    <Parameter Name="CLIE_ID" Parameter="cLIE_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CLIE_ID1" Parameter="cLIE_ID1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CLIE_ID2" Parameter="cLIE_ID2" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CLIE_ID3" Parameter="cLIE_ID3" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDID_FECHA" Parameter="pEDID_FECHA" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PEDID_FECHAP" Parameter="pEDID_FECHAP" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PEDID_FECHAM" Parameter="pEDID_FECHAM" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PEDID_FECHAPG" Parameter="pEDID_FECHAPG" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ALMA_ID" Parameter="aLMA_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PERS_ID" Parameter="pERS_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PERS_ID1" Parameter="pERS_ID1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ESTDOC_ID" Parameter="eSTDOC_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="GRDE_ID" Parameter="gRDE_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IRPF_ID" Parameter="iRPF_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDID_RECFIN" Parameter="pEDID_RECFIN" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MONEDA_ID" Parameter="mONEDA_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="FPAGO_ID" Parameter="fPAGO_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDID_ENTIDAD" Parameter="pEDID_ENTIDAD" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PEDID_DIRPAGO" Parameter="pEDID_DIRPAGO" Type="System.String" DbType="VarChar(65)" />
+    <Parameter Name="PEDID_BANCO" Parameter="pEDID_BANCO" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="PEDID_SUCURSAL" Parameter="pEDID_SUCURSAL" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="PEDID_DC" Parameter="pEDID_DC" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="PEDID_CC" Parameter="pEDID_CC" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="TIPORT_ID" Parameter="tIPORT_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="PEDID_ENTREGA" Parameter="pEDID_ENTREGA" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="PEDID_ANOTACIONES" Parameter="pEDID_ANOTACIONES" Type="System.String" DbType="Text" />
+    <Parameter Name="DOCUD_NOMBRE" Parameter="dOCUD_NOMBRE" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DOCUD_RAZONSOCIAL" Parameter="dOCUD_RAZONSOCIAL" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DOCUD_NIF" Parameter="dOCUD_NIF" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCUD_DIRECCION" Parameter="dOCUD_DIRECCION" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DOCUD_CP" Parameter="dOCUD_CP" Type="System.String" DbType="VarChar(7)" />
+    <Parameter Name="DOCUD_POBLACION" Parameter="dOCUD_POBLACION" Type="System.String" DbType="VarChar(35)" />
+    <Parameter Name="DOCUD_PROVINCIA" Parameter="dOCUD_PROVINCIA" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="PAIS_ID" Parameter="pAIS_ID" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="DOCUD_TELEFONO" Parameter="dOCUD_TELEFONO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCUD_TELEFONO1" Parameter="dOCUD_TELEFONO1" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCUD_MOVIL" Parameter="dOCUD_MOVIL" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCUD_EMAIL" Parameter="dOCUD_EMAIL" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="DOCUD_WEB" Parameter="dOCUD_WEB" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="DOCUD_EAN" Parameter="dOCUD_EAN" Type="System.String" DbType="VarChar(28)" />
+    <Parameter Name="CLIEGF_ID" Parameter="cLIEGF_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="HORA_AVISO" Parameter="hORA_AVISO" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="PEDID_B" Parameter="pEDID_B" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="ARTI_ID" Parameter="aRTI_ID" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="AGENTE_EXTERNO" Parameter="aGENTE_EXTERNO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AGENTE_INTERNO" Parameter="aGENTE_INTERNO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="REPRE_ID" Parameter="rEPRE_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="APLICA_PRECIO_MEDIADOR" Parameter="aPLICA_PRECIO_MEDIADOR" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="XML" Parameter="xML" Type="System.String" DbType="Text" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CLIENTES_SEL_Q2" Method="CLIENTES_SEL_Q2">
+    <Parameter Name="CLIE_ID" Parameter="cLIE_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <ElementType Name="CLIENTES_SEL_Q2Result">
+      <Column Name="CLIE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLIE_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CLIE_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLIE_ID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLIE_ID3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLIE_RAZONSOCIAL" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_NIF" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DIRECCION" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_CP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_POBLACION" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_PROVINCIA" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="PAIS_ID" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_TELEFONO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_TELEFONO1" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_MOVIL" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_FAX" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_EMAIL" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_WEB" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_EAN" Type="System.String" DbType="VarChar(28) NOT NULL" CanBeNull="false" />
+      <Column Name="TICLI_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GRCU_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ESTAR_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="TIFAC_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDIOMA_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="MONEDA_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="GRDE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLIE_RECFIN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IRPF_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FPAGO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BANC_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLIE_ENTIDAD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DIRPAGO" Type="System.String" DbType="VarChar(65) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_BANCO" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_SUCURSAL" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DC" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_CC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DIASDP" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_RIESGO" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TIRI_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="TIPORT_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="CLIE_ENTREGA" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_ANOTACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CLIE1_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLIE2_ID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ZONA_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="RUTA_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="CLIE_DIA1" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DIA2" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DIA3" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DIA4" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="TARF_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PERFCL_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TIOP_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="CLIE_FECHAALTA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CLIE_FECHABAJA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MOTIVOS_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="IMPRIMIR_INFORMES" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="PAIS_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TICLI_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GRCU_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ESTAR_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIFAC_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IDIOMA_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MONEDA_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GRDE_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GRDE_DESCRIPCION1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IRPF_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FPAGO_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIPORT_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIRI_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CLIE_DESCRIPCION1" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="CLIE_DESCRIPCION2" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="BANC_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZONA_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RUTA_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TARF_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PERFCL_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIOP_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MOTIVOS_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AGENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PERS_NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CLIE_DIRECCION_ENTREGA" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_CP_ENTREGA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_POBLACION_ENTREGA" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_PROVINCIA_ENTREGA" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="PAIS_ID_ENTREGA" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_TELEFONO_ENTREGA" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_TELEFONO1_ENTREGA" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_MOVIL_ENTREGA" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_FAX_ENTREGA" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_EMAIL_ENTREGA" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_WEB_ENTREGA" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PAIS_DESCRIPCION_ENTREGA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CLIE_IBAN" Type="System.String" DbType="VarChar(34)" CanBeNull="true" />
+      <Column Name="PROVINCIA_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROVINCIA_DESCRIPCION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="AGENTE_INTERNO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AGENTE_INTERNO_NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SUPERVISOR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SUPERVISOR_NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PERIODICIDAD_ACTUACIONES" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_LUNES" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_MARTES" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_MIERCOLES" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_JUEVES" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_VIERNES" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_SABADO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VISITA_DOMINGO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ASUNTO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ASUNTO_DESCRIPCION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ESTACIONAL_ENERO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_FEBRERO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_MARZO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_ABRIL" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_MAYO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_JUNIO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_JULIO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_AGOSTO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_SEPTIEMBRE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_OCTUBRE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_NOVIEMBRE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ESTACIONAL_DICIEMBRE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PEDIDOSV_INTER_Q2_INS" Method="PEDIDOSV_INTER_Q2_INS">
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="NUMERO" Parameter="nUMERO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="NUMERO_ID" Parameter="nUMERO_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DEPAE_ID" Parameter="dEPAE_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="TINTE_ID" Parameter="tINTE_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TELEFONO" Parameter="tELEFONO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="MOVIL" Parameter="mOVIL" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="FAX" Parameter="fAX" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="VarChar(105)" />
+    <Parameter Name="EC" Parameter="eC" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="EM" Parameter="eM" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="EF" Parameter="eF" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="ES" Parameter="eS" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="EW" Parameter="eW" Type="System.String" DbType="VarChar(1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PEDIDOSV_INTER_SEL" Method="PEDIDOSV_INTER_SEL">
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDID_ID" Parameter="pEDID_ID" Type="System.String" DbType="VarChar(15)" />
+    <ElementType Name="PEDIDOSV_INTER_SELResult">
+      <Column Name="DOCU_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="NUMERO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="NUMERO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DEPAE_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="TINTE_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TELEFONO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="MOVIL" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="FAX" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(105) NOT NULL" CanBeNull="false" />
+      <Column Name="EC" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="EM" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="EF" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ES" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="EW" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PEDIDOSV_INTER_Q2_SEL" Method="PEDIDOSV_INTER_Q2_SEL">
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDID_ID" Parameter="pEDID_ID" Type="System.String" DbType="VarChar(15)" />
+    <ElementType Name="PEDIDOSV_INTER_Q2_SELResult">
+      <Column Name="DOCU_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="NUMERO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="NUMERO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DEPAE_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="TINTE_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TELEFONO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="MOVIL" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="FAX" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(105) NOT NULL" CanBeNull="false" />
+      <Column Name="EC" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ECB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EM" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="EMB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EF" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="EFB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ES" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ESB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EW" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="EWB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PEDIDOSV_INTER_Q2_DEL" Method="PEDIDOSV_INTER_Q2_DEL">
+    <Parameter Name="NUMERO" Parameter="nUMERO" Type="System.String" DbType="VarChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PEDIDOSV_LI_SEL" Method="PEDIDOSV_LI_SEL">
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDID_ID" Parameter="pEDID_ID" Type="System.String" DbType="VarChar(15)" />
+    <ElementType Name="PEDIDOSV_LI_SELResult">
+      <Column Name="DOCU_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_LINEA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_SUBLINEA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LIDO_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_DESCRIPCION" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_CANTIDAD" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_PRECIO" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+      <Column Name="GRDE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ESTDOC_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="UNID_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="DOCU_ID_ORIGEN" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="DOCU_NUMERO_ORIGEN" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DOCU_LINEA_ORIGEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DOCU_SUBLINEA_ORIGEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PEDIDL_FLUJOC" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_FLUJOL" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="COMP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PEDIDL_FECHAD_APLIC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_FECHAH_APLIC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="GRDE_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GRDEL_VALOR" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TOTAL" Type="System.Decimal" DbType="Decimal(0,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Q2_PEDIDOSV_CON" Method="Q2_PEDIDOSV_CON">
+    <Parameter Name="FECHAD" Parameter="fECHAD" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="FECHAH" Parameter="fECHAH" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="Q2_PEDIDOSV_CONResult">
+      <Column Name="PEDID_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_FECHA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DESCRIPCION" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ESTDOC_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="ESTDOC_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PERS_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PERS_NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="local" Class="PedidovDetalleDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=INFORMATICA02\SQLSRV2008;Initial Catalog=local;Integrated Security=True" SettingsObjectName="DocumentosVentas.Properties.Settings" SettingsPropertyName="localConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.MODELOS_DETALLE_Q2" Method="MODELOS_DETALLE_Q2">
+    <Parameter Name="TIPANA_ID" Parameter="tIPANA_ID" Type="System.String" DbType="NVarChar(12)" />
+    <ElementType Name="MODELOS_DETALLE_Q2Result">
+      <Column Name="ARTI_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_DESCRIPCION" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ES_HIBRIDO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ARTI_DETERMINACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ARTI_PNT_METODOLOGIA" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DEPA_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TIPANA_MATRIZ_CON_Q2" Method="TIPANA_MATRIZ_CON_Q2">
+    <Parameter Name="ARTI_ID" Parameter="aRTI_ID" Type="System.String" DbType="VarChar(15)" />
+    <ElementType Name="TIPANA_MATRIZ_CON_Q2Result">
+      <Column Name="TIPANA_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="TIPANA_DESCRIPCION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DETERMINACIONES_DETALLE_Q2" Method="DETERMINACIONES_DETALLE_Q2">
+    <Parameter Name="TIPANA_ID" Parameter="tIPANA_ID" Type="System.String" DbType="NVarChar(12)" />
+    <ElementType Name="DETERMINACIONES_DETALLE_Q2Result">
+      <Column Name="ARTI_ID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ARTI_DESCRIPCION" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_DETERMINACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ARTI_PNT_METODOLOGIA" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TIPAR_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="DEPA_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Q2_GET_DETERMINACIONES_BY_TIPO_ANALISIS" Method="Q2_GET_DETERMINACIONES_BY_TIPO_ANALISIS">
+    <Parameter Name="TIPANA_ID" Parameter="tIPANA_ID" Type="System.String" DbType="VarChar(6)" />
+    <ElementType Name="Q2_GET_DETERMINACIONES_BY_TIPO_ANALISISResult">
+      <Column Name="ARTI_ID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ARTI_DESCRIPCION" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_DETERMINACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ARTI_PNT_METODOLOGIA" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TIPAR_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="DEPA_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Q2_GET_MODELOS_BY_TIPO_ANALISIS" Method="Q2_GET_MODELOS_BY_TIPO_ANALISIS">
+    <Parameter Name="TIPANA_ID" Parameter="tIPANA_ID" Type="System.String" DbType="VarChar(6)" />
+    <ElementType Name="Q2_GET_MODELOS_BY_TIPO_ANALISISResult">
+      <Column Name="ARTI_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_DESCRIPCION" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ES_HIBRIDO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ARTI_DETERMINACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ARTI_PNT_METODOLOGIA" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DEPA_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Q2_GET_ARTICULOS_CARGO_BY_TIPO_ANALISIS" Method="Q2_GET_ARTICULOS_CARGO_BY_TIPO_ANALISIS">
+    <Parameter Name="TIPANA_ID" Parameter="tIPANA_ID" Type="System.String" DbType="VarChar(6)" />
+    <ElementType Name="Q2_GET_ARTICULOS_CARGO_BY_TIPO_ANALISISResult">
+      <Column Name="ARTI_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_DESCRIPCION" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TIPAR_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Q2_GET_ARTICULOS_CARGO_SERVICIOS_E_INFORMES" Method="Q2_GET_ARTICULOS_CARGO_SERVICIOS_E_INFORMES">
+    <ElementType Name="Q2_GET_ARTICULOS_CARGO_SERVICIOS_E_INFORMESResult">
+      <Column Name="ARTI_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_DESCRIPCION" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TIPAR_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Q2_GET_BLOQUES_GRUPO_BY_CLIENTE" Method="Q2_GET_BLOQUES_GRUPO_BY_CLIENTE">
+    <Parameter Name="CLIE_ID" Parameter="cLIE_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Q2_GET_BLOQUES_GRUPO_BY_CLIENTEResult">
+      <Column Name="DOCU_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PRESUV_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ESTDOC_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="BLOQUE_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FAMIL_ID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="FAMIL_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TITULO" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="REFERENCIA_CLIENTE" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="FECHA_CREACION" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DESCRIPCION" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Q2_GET_DETALLE_BY_BLOQUE" Method="Q2_GET_DETALLE_BY_BLOQUE">
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PRESUV_ID" Parameter="pRESUV_ID" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="BLOQUE_ID" Parameter="bLOQUE_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Q2_GET_DETALLE_BY_BLOQUEResult">
+      <Column Name="LIDO_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PRESUVL_LINEA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRESUVL_SUBLINEA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PRESUVL_DESCRIPCION" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PRESUVL_CANTIDAD" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+      <Column Name="UNID_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="UNID_DESCRIPCION" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="PRESUVL_PRECIO" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+      <Column Name="GRDE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GRDE_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="COMP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ARTI_DETERMINACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ARTI_PNT_METODOLOGIA" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Q2_GET_ASOCIADOS" Method="Q2_GET_ASOCIADOS">
+    <Parameter Name="ARTI_ID1" Parameter="aRTI_ID1" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Q2_GET_ASOCIADOSResult">
+      <Column Name="ARTI_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_DESCRIPCION" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_PNT_METODOLOGIA" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ARTI_DETERMINACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TIPAR_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="DEPA_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Q2_PEDIDOSV_LI_INS" Method="Q2_PEDIDOSV_LI_INS">
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDID_ID" Parameter="pEDID_ID" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="PEDIDL_LINEA" Parameter="pEDIDL_LINEA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDIDL_SUBLINEA" Parameter="pEDIDL_SUBLINEA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LIDO_ID" Parameter="lIDO_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDIDL_DESCRIPCION" Parameter="pEDIDL_DESCRIPCION" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="PEDIDL_CANTIDAD" Parameter="pEDIDL_CANTIDAD" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="PEDIDL_PRECIO" Parameter="pEDIDL_PRECIO" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="GRDE_ID" Parameter="gRDE_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ESTDOC_ID" Parameter="eSTDOC_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="UNID_ID" Parameter="uNID_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="DOCU_ID_ORIGEN" Parameter="dOCU_ID_ORIGEN" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="DOCU_NUMERO_ORIGEN" Parameter="dOCU_NUMERO_ORIGEN" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCU_LINEA_ORIGEN" Parameter="dOCU_LINEA_ORIGEN" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DOCU_SUBLINEA_ORIGEN" Parameter="dOCU_SUBLINEA_ORIGEN" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDIDL_FLUJOC" Parameter="pEDIDL_FLUJOC" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="PEDIDL_FLUJOL" Parameter="pEDIDL_FLUJOL" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="COMP_ID" Parameter="cOMP_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ARTI_ID1" Parameter="aRTI_ID1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDIDL_FECHAD_APLIC" Parameter="pEDIDL_FECHAD_APLIC" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PEDIDL_FECHAH_APLIC" Parameter="pEDIDL_FECHAH_APLIC" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Q2_ELIMINAR_DETALLE_FONDO" Method="Q2_ELIMINAR_DETALLE_FONDO">
+    <Parameter Name="DOCU_ACTA_ID" Parameter="dOCU_ACTA_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDID_ID" Parameter="pEDID_ID" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="PEDIDL_LINEA" Parameter="pEDIDL_LINEA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDIDL_SUBLINEA" Parameter="pEDIDL_SUBLINEA" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Q2_ELIMINAR_DETALLE" Method="Q2_ELIMINAR_DETALLE">
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDID_ID" Parameter="pEDID_ID" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="PEDIDL_LINEA" Parameter="pEDIDL_LINEA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDIDL_SUBLINEA" Parameter="pEDIDL_SUBLINEA" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Q2_PEDIDOSV_LI_UPD" Method="Q2_PEDIDOSV_LI_UPD">
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDID_ID" Parameter="pEDID_ID" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="PEDIDL_LINEA" Parameter="pEDIDL_LINEA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDIDL_SUBLINEA" Parameter="pEDIDL_SUBLINEA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LIDO_ID" Parameter="lIDO_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDIDL_DESCRIPCION" Parameter="pEDIDL_DESCRIPCION" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="PEDIDL_CANTIDAD" Parameter="pEDIDL_CANTIDAD" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="PEDIDL_PRECIO" Parameter="pEDIDL_PRECIO" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="GRDE_ID" Parameter="gRDE_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ESTDOC_ID" Parameter="eSTDOC_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="UNID_ID" Parameter="uNID_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="DOCU_ID_ORIGEN" Parameter="dOCU_ID_ORIGEN" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="DOCU_NUMERO_ORIGEN" Parameter="dOCU_NUMERO_ORIGEN" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCU_LINEA_ORIGEN" Parameter="dOCU_LINEA_ORIGEN" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DOCU_SUBLINEA_ORIGEN" Parameter="dOCU_SUBLINEA_ORIGEN" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDIDL_FLUJOC" Parameter="pEDIDL_FLUJOC" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="PEDIDL_FLUJOL" Parameter="pEDIDL_FLUJOL" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="COMP_ID" Parameter="cOMP_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ARTI_ID1" Parameter="aRTI_ID1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PEDIDL_FECHAD_APLIC" Parameter="pEDIDL_FECHAD_APLIC" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="PEDIDL_FECHAH_APLIC" Parameter="pEDIDL_FECHAH_APLIC" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Q2_PEDIDO_ACTUALIZAR_ESTADO" Method="Q2_PEDIDO_ACTUALIZAR_ESTADO">
+    <Parameter Name="ESTDOC_ID" Parameter="eSTDOC_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDID_ID" Parameter="pEDID_ID" Type="System.String" DbType="VarChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DOCUMENTO_ESTADO_INS" Method="DOCUMENTO_ESTADO_INS">
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="NUMERO" Parameter="nUMERO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ESTDOC_ID" Parameter="eSTDOC_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="EST_FECHA" Parameter="eST_FECHA" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ESTADO_REGISTRO" Parameter="eSTADO_REGISTRO" Type="System.String" DbType="VarChar(1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Q2_GET_DETALLE_BY_PEDIDO2" Method="Q2_GET_DETALLE_BY_PEDIDO2">
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="PEDID_ID" Parameter="pEDID_ID" Type="System.String" DbType="VarChar(15)" />
+    <ElementType Name="Q2_GET_DETALLE_BY_PEDIDO2Result">
+      <Column Name="DOCU_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_LINEA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_SUBLINEA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LIDO_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_DESCRIPCION" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_CANTIDAD" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_PRECIO" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+      <Column Name="GRDE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ESTDOC_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="UNID_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="DOCU_ID_ORIGEN" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="DOCU_NUMERO_ORIGEN" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DOCU_LINEA_ORIGEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DOCU_SUBLINEA_ORIGEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PEDIDL_FLUJOC" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_FLUJOL" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="COMP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PEDIDL_FECHAD_APLIC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_FECHAH_APLIC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="UNID_DESCRIPCION" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="GRDE_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPA_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Q2_GET_COMP_IVA_CLIENTE" Method="Q2_GET_COMP_IVA_CLIENTE">
+    <Parameter Name="CLIE_ID" Parameter="cLIE_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Q2_GET_COMP_IVA_CLIENTEResult">
+      <Column Name="COMP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CLIENTES_COND_PRECIO2" Method="CLIENTES_COND_PRECIO2">
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="INTER_ID" Parameter="iNTER_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FECHA" Parameter="fECHA" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ARTI_ID1" Parameter="aRTI_ID1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <ElementType Name="CLIENTES_COND_PRECIO2Result">
+      <Column Name="ESCA_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PRECIO" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+      <Column Name="GRDE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ESCAL_DESDE" Type="System.Decimal" DbType="Decimal(0,0)" CanBeNull="true" />
+      <Column Name="ESCAL_HASTA" Type="System.Decimal" DbType="Decimal(0,0)" CanBeNull="true" />
+      <Column Name="ESCAL_VALOR" Type="System.Decimal" DbType="Decimal(0,0)" CanBeNull="true" />
+      <Column Name="ESCAL_VALOR1" Type="System.Decimal" DbType="Decimal(0,0)" CanBeNull="true" />
+      <Column Name="TRAM_DESDE" Type="System.Decimal" DbType="Decimal(0,0)" CanBeNull="true" />
+      <Column Name="TRAM_HASTA" Type="System.Decimal" DbType="Decimal(0,0)" CanBeNull="true" />
+      <Column Name="TABLA_ESCALA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CAMPO_ESCALA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TABLA_TRAMO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CAMPO_TRAMO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Q2_PEDIDOSV_LI_SEL" Method="Q2_PEDIDOSV_LI_SEL">
+    <Parameter Name="PEDID_ID" Parameter="pEDID_ID" Type="System.String" DbType="VarChar(15)" />
+    <ElementType Name="Q2_PEDIDOSV_LI_SELResult">
+      <Column Name="DOCU_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDID_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_LINEA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_SUBLINEA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LIDO_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_DESCRIPCION" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_CANTIDAD" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_PRECIO" Type="System.Decimal" DbType="Decimal(0,0) NOT NULL" CanBeNull="false" />
+      <Column Name="GRDE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ESTDOC_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="UNID_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="DOCU_ID_ORIGEN" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="DOCU_NUMERO_ORIGEN" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DOCU_LINEA_ORIGEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DOCU_SUBLINEA_ORIGEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PEDIDL_FLUJOC" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_FLUJOL" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="COMP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PEDIDL_FECHAD_APLIC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PEDIDL_FECHAH_APLIC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="local" Class="RegistroLaboratorioPedidoVDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=INFORMATICA02\SQLSRV2008;Initial Catalog=local;Integrated Security=True" SettingsObjectName="DocumentosVentas.Properties.Settings" SettingsPropertyName="localConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.REGISTROLAB_UPD1" Method="REGISTROLAB_UPD1">
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="REGLAB_ID" Parameter="rEGLAB_ID" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="REGLAB_FECHA" Parameter="rEGLAB_FECHA" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ARTI_ID1" Parameter="aRTI_ID1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="REGLAB_ANOTACIONES" Parameter="rEGLAB_ANOTACIONES" Type="System.String" DbType="Text" />
+    <Parameter Name="REGLAB_XML" Parameter="rEGLAB_XML" Type="System.String" DbType="Text" />
+    <Parameter Name="SUREFERENCIA" Parameter="sUREFERENCIA" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CLIE_ID" Parameter="cLIE_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NIVURG_ID" Parameter="nIVURG_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="REGLAB_HORA" Parameter="rEGLAB_HORA" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="REGLAB_FECHAMUESTREO" Parameter="rEGLAB_FECHAMUESTREO" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="REGLAB_HORAMUESTREO" Parameter="rEGLAB_HORAMUESTREO" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="REGLAB_FECHAMAXIMA" Parameter="rEGLAB_FECHAMAXIMA" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="REGLAB_HORAMAXIMA" Parameter="rEGLAB_HORAMAXIMA" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="REGLAB_EMPRESAMUESTREO" Parameter="rEGLAB_EMPRESAMUESTREO" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="REGLAB_MUESTREADOR" Parameter="rEGLAB_MUESTREADOR" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="REGLAB_FECHARECOGIDA" Parameter="rEGLAB_FECHARECOGIDA" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="REGLAB_HORARECOGIDA" Parameter="rEGLAB_HORARECOGIDA" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="REGLAB_EMPRESARECOGIDA" Parameter="rEGLAB_EMPRESARECOGIDA" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="REGLAB_RECOGEDOR" Parameter="rEGLAB_RECOGEDOR" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="REGLAB_PERSONAENTRADA" Parameter="rEGLAB_PERSONAENTRADA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MUESTRA_DESCRIPCION" Parameter="mUESTRA_DESCRIPCION" Type="System.String" DbType="VarChar(70)" />
+    <Parameter Name="MUESTRA_REF1" Parameter="mUESTRA_REF1" Type="System.String" DbType="VarChar(70)" />
+    <Parameter Name="MUESTRA_REF2" Parameter="mUESTRA_REF2" Type="System.String" DbType="VarChar(70)" />
+    <Parameter Name="MUESTRA_REF3" Parameter="mUESTRA_REF3" Type="System.String" DbType="VarChar(70)" />
+    <Parameter Name="MUESTRA_OBSERVACIONES" Parameter="mUESTRA_OBSERVACIONES" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="MUESTREADOR_PERS_ID" Parameter="mUESTREADOR_PERS_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RECOGEDOR_PERS_ID" Parameter="rECOGEDOR_PERS_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.REGISTROLAB_INS2" Method="REGISTROLAB_INS2">
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="REGLAB_ID" Parameter="rEGLAB_ID" Type="System.String" DbType="VarChar(15)" Direction="InOut" />
+    <Parameter Name="ESTDOC_ID" Parameter="eSTDOC_ID" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="REGLAB_FECHA" Parameter="rEGLAB_FECHA" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="DOCU_ID_ORIGEN" Parameter="dOCU_ID_ORIGEN" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="DOCU_NUMERO_ORIGEN" Parameter="dOCU_NUMERO_ORIGEN" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ARTI_ID1" Parameter="aRTI_ID1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="REGLAB_ANOTACIONES" Parameter="rEGLAB_ANOTACIONES" Type="System.String" DbType="Text" />
+    <Parameter Name="REGLAB_XML" Parameter="rEGLAB_XML" Type="System.String" DbType="Text" />
+    <Parameter Name="SUREFERENCIA" Parameter="sUREFERENCIA" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CLIE_ID" Parameter="cLIE_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NIVURG_ID" Parameter="nIVURG_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="REGLAB_HORA" Parameter="rEGLAB_HORA" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="REGLAB_FECHAMUESTREO" Parameter="rEGLAB_FECHAMUESTREO" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="REGLAB_HORAMUESTREO" Parameter="rEGLAB_HORAMUESTREO" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="REGLAB_FECHAMAXIMA" Parameter="rEGLAB_FECHAMAXIMA" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="REGLAB_HORAMAXIMA" Parameter="rEGLAB_HORAMAXIMA" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="REGLAB_EMPRESAMUESTREO" Parameter="rEGLAB_EMPRESAMUESTREO" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="REGLAB_MUESTREADOR" Parameter="rEGLAB_MUESTREADOR" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="REGLAB_FECHARECOGIDA" Parameter="rEGLAB_FECHARECOGIDA" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="REGLAB_HORARECOGIDA" Parameter="rEGLAB_HORARECOGIDA" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="REGLAB_EMPRESARECOGIDA" Parameter="rEGLAB_EMPRESARECOGIDA" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="REGLAB_RECOGEDOR" Parameter="rEGLAB_RECOGEDOR" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="REGLAB_PERSONAENTRADA" Parameter="rEGLAB_PERSONAENTRADA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MUESTRA_DESCRIPCION" Parameter="mUESTRA_DESCRIPCION" Type="System.String" DbType="VarChar(70)" />
+    <Parameter Name="MUESTRA_REF1" Parameter="mUESTRA_REF1" Type="System.String" DbType="VarChar(70)" />
+    <Parameter Name="MUESTRA_REF2" Parameter="mUESTRA_REF2" Type="System.String" DbType="VarChar(70)" />
+    <Parameter Name="MUESTRA_REF3" Parameter="mUESTRA_REF3" Type="System.String" DbType="VarChar(70)" />
+    <Parameter Name="MUESTRA_OBSERVACIONES" Parameter="mUESTRA_OBSERVACIONES" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="MUESTREADOR_PERS_ID" Parameter="mUESTREADOR_PERS_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RECOGEDOR_PERS_ID" Parameter="rECOGEDOR_PERS_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9ED74CDC-4B6B-4972-9C8F-31114165F9DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DocumentosVentas</RootNamespace>
+    <AssemblyName>DocumentosVentas</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Almacen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Almacen\bin\Debug\Almacen.dll</HintPath>
+    </Reference>
+    <Reference Include="Auxiliares, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Auxiliares\obj\Debug\Auxiliares.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="ObjectListView, Version=2.5.1.20678, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ObjectListView\bin\debug\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="Quercus 2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Quercus 2\bin\Debug\Quercus 2.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utilidades, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Utilidades\bin\Debug\Utilidades.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArticulosConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArticulosConsulta.Designer.cs">
+      <DependentUpon>ArticulosConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ArticulosConsultaCtx.cs" />
+    <Compile Include="ArticulosConsultaDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArticulosConsultaDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesConsulta.Designer.cs">
+      <DependentUpon>ClientesConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ClientesConsultaCtx.cs" />
+    <Compile Include="ClientesConsultaDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientesConsultaDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="InterlocutoresConsulta2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterlocutoresConsulta2.Designer.cs">
+      <DependentUpon>InterlocutoresConsulta2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="odts\DetalleDeterminacion.cs" />
+    <Compile Include="odts\DetalleModelo.cs" />
+    <Compile Include="odts\PresupuestoVenta.cs" />
+    <Compile Include="odts\PresupuestoVentaBloque.cs" />
+    <Compile Include="odts\PresupuestoVentaDetalle.cs" />
+    <Compile Include="odts\TextoInterno.cs" />
+    <Compile Include="PedidovDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PedidovDetalle.Designer.cs">
+      <DependentUpon>PedidovDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormasPagoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormasPagoConsulta.Designer.cs">
+      <DependentUpon>FormasPagoConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormasPagoConsultaDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormasPagoConsultaDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Context\FormasPagoConsultaCtx.cs" />
+    <Compile Include="GruposCondicionesConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GruposCondicionesConsulta.Designer.cs">
+      <DependentUpon>GruposCondicionesConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\GruposCondicionesConsultaCtx.cs" />
+    <Compile Include="GruposCondicionesConsultaDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GruposCondicionesConsultaDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="InterlocutoresConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterlocutoresConsulta.Designer.cs">
+      <DependentUpon>InterlocutoresConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\InterlocutoresConsultaCtx.cs" />
+    <Compile Include="InterlocutoresConsultaDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InterlocutoresConsultaDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="MediadorConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MediadorConsulta.Designer.cs">
+      <DependentUpon>MediadorConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\MediadorConsultaCtx.cs" />
+    <Compile Include="MediadoresConsultaDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MediadoresConsultaDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="MonedasConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonedasConsulta.Designer.cs">
+      <DependentUpon>MonedasConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\MonedasConsultaCtx.cs" />
+    <Compile Include="MonedasConsultaDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonedasConsultaDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PaisesConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaisesConsulta.Designer.cs">
+      <DependentUpon>PaisesConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\PaisesConsultaCtx.cs" />
+    <Compile Include="PaisesConsultaDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaisesConsultaDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Context\PedidovDetalleCtx.cs" />
+    <Compile Include="PedidovDetalleDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PedidovDetalleDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalConsulta.Designer.cs">
+      <DependentUpon>PersonalConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstadosDocumentosConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstadosDocumentosConsulta.Designer.cs">
+      <DependentUpon>EstadosDocumentosConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentosConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocumentosConsulta.Designer.cs">
+      <DependentUpon>DocumentosConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\DocumentosConsultaCtx.cs" />
+    <Compile Include="DocumentosConsultaDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DocumentosConsultaDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Context\EstadosDocumentosConsultaCtx.cs" />
+    <Compile Include="EstadosDocumentosConsultaDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstadosDocumentosConsultaDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PedidosDB.cs">
+      <DependentUpon>PedidosDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PedidosDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PedidosDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidosv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pedidosv.Designer.cs">
+      <DependentUpon>Pedidosv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PedidosvConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PedidosvConsulta.Designer.cs">
+      <DependentUpon>PedidosvConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\PedidosvCtx.cs" />
+    <Compile Include="Context\PersonalConsultaCtx.cs" />
+    <Compile Include="PersonalConsultaDB.designer.cs">
+      <DependentUpon>PersonalConsultaDB.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="PortesConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PortesConsulta.Designer.cs">
+      <DependentUpon>PortesConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\PortesConsultaCtx.cs" />
+    <Compile Include="PortesConsultaDB.designer.cs">
+      <DependentUpon>PortesConsultaDB.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="app.config" />
+    <None Include="ArticulosConsultaDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ArticulosConsultaDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClientesConsultaDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ClientesConsultaDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DocumentosConsultaDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DocumentosConsultaDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EstadosDocumentosConsultaDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>EstadosDocumentosConsultaDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FormasPagoConsultaDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>FormasPagoConsultaDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GruposCondicionesConsultaDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>GruposCondicionesConsultaDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InterlocutoresConsultaDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>InterlocutoresConsultaDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MediadoresConsultaDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MediadoresConsultaDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MonedasConsultaDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MonedasConsultaDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PaisesConsultaDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PaisesConsultaDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PedidosDB.dbml.layout">
+      <DependentUpon>PedidosDB.dbml</DependentUpon>
+    </None>
+    <None Include="ArticulosConsultaDB.dbml.layout">
+      <DependentUpon>ArticulosConsultaDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="ArticulosConsulta.resx">
+      <DependentUpon>ArticulosConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesConsulta.resx">
+      <DependentUpon>ClientesConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClientesConsultaDB.dbml.layout">
+      <DependentUpon>ClientesConsultaDB.dbml</DependentUpon>
+    </None>
+    <None Include="MediadoresConsultaDB.dbml.layout">
+      <DependentUpon>MediadoresConsultaDB.dbml</DependentUpon>
+    </None>
+    <None Include="InterlocutoresConsultaDB.dbml.layout">
+      <DependentUpon>InterlocutoresConsultaDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="InterlocutoresConsulta2.resx">
+      <DependentUpon>InterlocutoresConsulta2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PedidovDetalle.resx">
+      <DependentUpon>PedidovDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="GruposCondicionesConsultaDB.dbml.layout">
+      <DependentUpon>GruposCondicionesConsultaDB.dbml</DependentUpon>
+    </None>
+    <None Include="FormasPagoConsultaDB.dbml.layout">
+      <DependentUpon>FormasPagoConsultaDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="FormasPagoConsulta.resx">
+      <DependentUpon>FormasPagoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GruposCondicionesConsulta.resx">
+      <DependentUpon>GruposCondicionesConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterlocutoresConsulta.resx">
+      <DependentUpon>InterlocutoresConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MediadorConsulta.resx">
+      <DependentUpon>MediadorConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MonedasConsultaDB.dbml.layout">
+      <DependentUpon>MonedasConsultaDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="MonedasConsulta.resx">
+      <DependentUpon>MonedasConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="PaisesConsultaDB.dbml.layout">
+      <DependentUpon>PaisesConsultaDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="PaisesConsulta.resx">
+      <DependentUpon>PaisesConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="PedidovDetalleDB.dbml.layout">
+      <DependentUpon>PedidovDetalleDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="PersonalConsulta.resx">
+      <DependentUpon>PersonalConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadosDocumentosConsulta.resx">
+      <DependentUpon>EstadosDocumentosConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentosConsulta.resx">
+      <DependentUpon>DocumentosConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DocumentosConsultaDB.dbml.layout">
+      <DependentUpon>DocumentosConsultaDB.dbml</DependentUpon>
+    </None>
+    <None Include="EstadosDocumentosConsultaDB.dbml.layout">
+      <DependentUpon>EstadosDocumentosConsultaDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Pedidosv.resx">
+      <DependentUpon>Pedidosv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PedidosvConsulta.resx">
+      <DependentUpon>PedidosvConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PortesConsulta.resx">
+      <DependentUpon>PortesConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroLaboratorioPedidoV.resx">
+      <DependentUpon>RegistroLaboratorioPedidoV.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="RegistroLaboratorioPedidoVDB.dbml.layout">
+      <DependentUpon>RegistroLaboratorioPedidoVDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="TiposIRPFConsulta.resx">
+      <DependentUpon>TiposIRPFConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="PortesConsultaDB.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PortesConsultaDB.designer.cs</LastGenOutput>
+    </None>
+    <None Include="PortesConsultaDB.dbml.layout">
+      <DependentUpon>PortesConsultaDB.dbml</DependentUpon>
+    </None>
+    <None Include="TiposIRPFConsultaDB.dbml.layout">
+      <DependentUpon>TiposIRPFConsultaDB.dbml</DependentUpon>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="PedidosDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PedidosDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PersonalConsultaDB.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PersonalConsultaDB.designer.cs</LastGenOutput>
+    </None>
+    <None Include="PersonalConsultaDB.dbml.layout">
+      <DependentUpon>PersonalConsultaDB.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\CLIENTES_SEL_Q2Result.datasource" />
+    <None Include="Properties\DataSources\PEDIDOSV_SELResult.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TiposIRPFConsultaDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>TiposIRPFConsultaDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RegistroLaboratorioPedidoV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroLaboratorioPedidoV.Designer.cs">
+      <DependentUpon>RegistroLaboratorioPedidoV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroLaboratorioPedidoVDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistroLaboratorioPedidoVDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="TiposIRPFConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiposIRPFConsulta.Designer.cs">
+      <DependentUpon>TiposIRPFConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TiposIRPFConsultaCtx.cs" />
+    <Compile Include="TiposIRPFConsultaDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TiposIRPFConsultaDB.dbml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New 48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PedidovDetalleDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PedidovDetalleDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\REGISTROLAB.datasource" />
+    <None Include="RegistroLaboratorioPedidoVDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>RegistroLaboratorioPedidoVDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\A 128x128.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

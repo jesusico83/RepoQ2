@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="local" Class="InterlocutoresConsultaDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=INFORMATICA02\SQLSRV2008;Initial Catalog=local;Integrated Security=True" SettingsObjectName="DocumentosVentas.Properties.Settings" SettingsPropertyName="localConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CLIENTES_INTER" Member="CLIENTES_INTER">
+    <Type Name="CLIENTES_INTER">
+      <Column Name="CLIE_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CLIEI_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DEPAE_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="TINTE_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_TELEFONO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_MOVIL" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_FAX" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EMAIL" Type="System.String" DbType="VarChar(105) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EC" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EM" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EF" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_ES" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EW" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ACTIVO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ANOTACIONES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Function Name="dbo.CLIENTES_INTER_SEL" Method="CLIENTES_INTER_SEL">
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="CLIE_ID" Parameter="cLIE_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CLIENTES_INTER_SELResult">
+      <Column Name="CLIE_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DEPAE_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="TINTE_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_TELEFONO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_MOVIL" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_FAX" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EMAIL" Type="System.String" DbType="VarChar(105) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EC" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EM" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EF" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_ES" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EW" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ANOTACIONES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CLIENTES_INTER_Q2_SEL" Method="CLIENTES_INTER_Q2_SEL">
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="CLIE_ID" Parameter="cLIE_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CLIENTES_INTER_Q2_SELResult">
+      <Column Name="CLIE_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DEPAE_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="TINTE_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_TELEFONO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_MOVIL" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_FAX" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EMAIL" Type="System.String" DbType="VarChar(105) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EC" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_ECB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CLIEI_EM" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EMB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CLIEI_EF" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EFB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CLIEI_ES" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_ESB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CLIEI_EW" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EWB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ANOTACIONES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CLIENTES_INTER_Q2_SEL1" Method="CLIENTES_INTER_Q2_SEL1">
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="CLIE_ID" Parameter="cLIE_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CLIENTES_INTER_Q2_SEL1Result">
+      <Column Name="CLIE_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DEPAE_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="TINTE_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_TELEFONO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_MOVIL" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_FAX" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EMAIL" Type="System.String" DbType="VarChar(105) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EC" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_ECB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CLIEI_EM" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EMB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CLIEI_EF" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EFB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CLIEI_ES" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_ESB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CLIEI_EW" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIEI_EWB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ACTIVO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ANOTACIONES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+</Database>

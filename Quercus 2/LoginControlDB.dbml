@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="local" Class="LoginControlDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=INFORMATICA02\SQLSRV2008;Initial Catalog=local;Integrated Security=True" SettingsObjectName="Quercus_2.Properties.Settings" SettingsPropertyName="localConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.USUARIOS_Q2_SEL_PWD" Method="USUARIOS_Q2_SEL_PWD">
+    <Parameter Name="USU_ID" Parameter="uSU_ID" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="USU_PWD" Parameter="uSU_PWD" Type="System.String" DbType="VarChar(28)" />
+    <ElementType Name="USUARIOS_Q2_SEL_PWDResult">
+      <Column Name="USU_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PESE_ID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="USU_DESCRIPCION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="USU_ID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="local" Class="ClientesConsultaDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=INFORMATICA02\SQLSRV2008;Initial Catalog=local;Integrated Security=True" SettingsObjectName="DocumentosVentas.Properties.Settings" SettingsPropertyName="localConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.CLIENTES_CON1_Q2" Method="CLIENTES_CON1_Q2">
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="USU_ID" Parameter="uSU_ID" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="CLIE_DESCRIPCION" Parameter="cLIE_DESCRIPCION" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="CLIENTES_CON1_Q2Result">
+      <Column Name="CLIE_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CLIE_DESCRIPCION" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

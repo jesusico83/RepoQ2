@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="local" Class="ArticulosConsultaDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=INFORMATICA02\SQLSRV2008;Initial Catalog=local;Integrated Security=True" SettingsObjectName="DocumentosVentas.Properties.Settings" SettingsPropertyName="localConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.ARTICULOS_CON_Q2" Method="ARTICULOS_CON_Q2">
+    <Parameter Name="ARTI_DESCRIPCION" Parameter="aRTI_DESCRIPCION" Type="System.String" DbType="VarChar(70)" />
+    <Parameter Name="TIPAR_ID" Parameter="tIPAR_ID" Type="System.String" DbType="VarChar(3)" />
+    <ElementType Name="ARTICULOS_CON_Q2Result">
+      <Column Name="ARTI_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ARTI_DESCRIPCION" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="ESTAR_ID" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="TIPAR_ID" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="TIPAR_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FAMIL_ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SUBFA_ID" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ARTI_ID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TIPANALI_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="TIPANALI_DESCRIPCION" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

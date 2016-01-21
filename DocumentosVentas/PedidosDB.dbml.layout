@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15.625, 8.75" name="PedidosDB">
+  <DataContextMoniker Name="/PedidosDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="247988f0-d568-4c1c-bd43-07027d178891" isExpanded="false" absoluteBounds="4.125, 2.25, 3, 0.45">
+      <DataClassMoniker Name="/PedidosDBDataContext/PEDIDOSV" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9f57118-42ea-4e05-ac9e-5bf2f4321693" absoluteBounds="4.14, 2.71, 2.9699999999999998, 7.556844075520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" isExpanded="false" absoluteBounds="4.375, 5.25, 2.875, 0.45">
+      <DataClassMoniker Name="/PedidosDBDataContext/CLIENTES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="59693f59-5c9f-49cf-9812-7fc1acfe0537" absoluteBounds="4.39, 5.71, 2.8449999999999998, 17.748819986979164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.4609375 : 5.25); (5.4609375 : 2.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/CLIENTES/CLIENTES_PEDIDOSV" />
+      <nodes>
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.06640625 : 5.25); (6.06640625 : 2.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/CLIENTES/CLIENTES_PEDIDOSV1" />
+      <nodes>
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.369140625 : 5.25); (6.369140625 : 2.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/CLIENTES/CLIENTES_PEDIDOSV2" />
+      <nodes>
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.85546875 : 5.25); (4.85546875 : 2.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/CLIENTES/CLIENTES_PEDIDOSV3" />
+      <nodes>
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.35534615384615 : 5.7); (5.35534615384615 : 5.95); (6.29142307692308 : 5.95); (6.29142307692308 : 5.7)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PedidosDBDataContext/CLIENTES/CLIENTES_CLIENTES" />
+      <nodes>
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.375 : 5.37530769230769); (4.20833333333333 : 5.37530769230769 : JumpStart); (4.04166666666667 : 5.37530769230769 : JumpEnd); (3.875 : 5.37530769230769); (3.875 : 5.53730769230769); (4.04166666666667 : 5.53730769230769 : JumpStart); (4.20833333333333 : 5.53730769230769 : JumpEnd); (4.375 : 5.53730769230769)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PedidosDBDataContext/CLIENTES/CLIENTES_CLIENTES1" />
+      <nodes>
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" isExpanded="false" absoluteBounds="0.5, 3.25, 2, 0.45">
+      <DataClassMoniker Name="/PedidosDBDataContext/PERSONAL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b1be51d-8aa4-4ba7-a400-714b7f1de0eb" absoluteBounds="0.51500000000000012, 3.71, 1.9700000000000002, 5.6338297526041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 3.43267007692308); (3.16666666666667 : 3.43267007692308 : JumpStart); (3.33333333333333 : 3.43267007692308 : JumpEnd); (4.04166666666667 : 3.43267007692308 : JumpStart); (4.20833333333333 : 3.43267007692308 : JumpEnd); (4.458981875 : 3.43267007692308); (4.458981875 : 2.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/PERSONAL/PERSONAL_PEDIDOSV" />
+      <nodes>
+        <classShapeMoniker Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" />
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 3.31008253846154); (3.16666666666667 : 3.31008253846154 : JumpStart); (3.33333333333333 : 3.31008253846154 : JumpEnd); (4.04166666666667 : 3.31008253846154 : JumpStart); (4.20833333333333 : 3.31008253846154 : JumpEnd); (4.37564854166667 : 3.31008253846154 : JumpStart); (4.54231520833333 : 3.31008253846154 : JumpEnd); (4.77213541666667 : 3.31008253846154 : JumpStart); (4.93880208333333 : 3.31008253846154 : JumpEnd); (5.07486979166667 : 3.31008253846154 : JumpStart); (5.24153645833333 : 3.31008253846154 : JumpEnd); (5.37760416666667 : 3.31008253846154 : JumpStart); (5.54427083333333 : 3.31008253846154 : JumpEnd); (5.68033854166667 : 3.31008253846154 : JumpStart); (5.84700520833333 : 3.31008253846154 : JumpEnd); (5.98307291666667 : 3.31008253846154 : JumpStart); (6.14973958333333 : 3.31008253846154 : JumpEnd); (6.28580729166667 : 3.31008253846154 : JumpStart); (6.45247395833333 : 3.31008253846154 : JumpEnd); (6.671875 : 3.31008253846154); (6.671875 : 2.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/PERSONAL/PERSONAL_PEDIDOSV1" />
+      <nodes>
+        <classShapeMoniker Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" />
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 3.55070878846154); (3.16666666666667 : 3.55070878846154 : JumpStart); (3.33333333333333 : 3.55070878846154 : JumpEnd); (4.04166666666667 : 3.55070878846154 : JumpStart); (4.20833333333333 : 3.55070878846154 : JumpEnd); (4.77213541666667 : 3.55070878846154 : JumpStart); (4.93880208333333 : 3.55070878846154 : JumpEnd); (5.07486979166667 : 3.55070878846154 : JumpStart); (5.24153645833333 : 3.55070878846154 : JumpEnd); (5.37760416666667 : 3.55070878846154 : JumpStart); (5.54427083333333 : 3.55070878846154 : JumpEnd); (5.68033854166667 : 3.55070878846154 : JumpStart); (5.84700520833333 : 3.55070878846154 : JumpEnd); (5.98307291666667 : 3.55070878846154 : JumpStart); (6.14973958333333 : 3.55070878846154 : JumpEnd); (6.28580729166667 : 3.55070878846154 : JumpStart); (6.45247395833333 : 3.55070878846154 : JumpEnd); (6.89844 : 3.55070878846154); (6.89844 : 2.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/PERSONAL/PERSONAL_PEDIDOSV2" />
+      <nodes>
+        <classShapeMoniker Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" />
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 3.6687475); (3.16666666666667 : 3.6687475 : JumpStart); (3.33333333333333 : 3.6687475 : JumpEnd); (4.04166666666667 : 3.6687475 : JumpStart); (4.20833333333333 : 3.6687475 : JumpEnd); (4.77213541666667 : 3.6687475 : JumpStart); (4.93880208333333 : 3.6687475 : JumpEnd); (5.158203125 : 3.6687475); (5.158203125 : 2.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/PERSONAL/PERSONAL_PEDIDOSV3" />
+      <nodes>
+        <classShapeMoniker Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" />
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.48892307692308 : 3.7); (2.875 : 4.08607692307692); (2.875 : 5.475); (4.04166666666667 : 5.475 : JumpStart); (4.20833333333333 : 5.475 : JumpEnd); (4.375 : 5.475)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/PERSONAL/PERSONAL_CLIENTES" />
+      <nodes>
+        <classShapeMoniker Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" />
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 3.7); (2.90625 : 4.10625); (2.90625 : 5.475); (4.04166666666667 : 5.475 : JumpStart); (4.20833333333333 : 5.475 : JumpEnd); (4.375 : 5.475)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/PERSONAL/PERSONAL_CLIENTES1" />
+      <nodes>
+        <classShapeMoniker Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" />
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 3.67784515384615); (2.953125 : 4.13097015384615); (2.953125 : 5.475); (4.04166666666667 : 5.475 : JumpStart); (4.20833333333333 : 5.475 : JumpEnd); (4.375 : 5.475)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/PERSONAL/PERSONAL_CLIENTES2" />
+      <nodes>
+        <classShapeMoniker Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" />
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="83202bab-6f15-497b-ac9e-20d8af42240d" isExpanded="false" absoluteBounds="0.625, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/PedidosDBDataContext/MONEDAS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c5a9506f-ca7b-4fb7-80dc-11d0b68c7d13" absoluteBounds="0.63999999999999968, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.1250025 : 1.2); (2.1250025 : 2.475); (3.16666666666667 : 2.475 : JumpStart); (3.33333333333333 : 2.475 : JumpEnd); (4.125 : 2.475)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/MONEDAS/MONEDAS_PEDIDOSV" />
+      <nodes>
+        <classShapeMoniker Id="83202bab-6f15-497b-ac9e-20d8af42240d" />
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 1.2); (3.25 : 1.825); (3.25 : 5.331248); (4.04166666666667 : 5.331248 : JumpStart); (4.20833333333333 : 5.331248 : JumpEnd); (4.375 : 5.331248)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/MONEDAS/MONEDAS_CLIENTES" />
+      <nodes>
+        <classShapeMoniker Id="83202bab-6f15-497b-ac9e-20d8af42240d" />
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5625 : 1.2); (1.5625 : 3.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/MONEDAS/MONEDAS_PERSONAL" />
+      <nodes>
+        <classShapeMoniker Id="83202bab-6f15-497b-ac9e-20d8af42240d" />
+        <classShapeMoniker Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="05248480-c3cf-4254-a17c-4a18e654539a" isExpanded="false" absoluteBounds="0.875, 5.25, 1.25, 0.45">
+      <DataClassMoniker Name="/PedidosDBDataContext/FORMAS_PAGO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ee3ab2c-461f-4137-935a-b6405e1adf36" absoluteBounds="0.89, 5.71, 1.2200000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.125 : 5.25); (2.5 : 4.875); (2.79166666666667 : 4.875 : JumpStart); (3.03645833333333 : 4.875 : JumpEnd); (3.16666666666667 : 4.875 : JumpStart); (3.33333333333333 : 4.875 : JumpEnd); (4.04166666666667 : 4.875 : JumpStart); (4.20833333333333 : 4.875 : JumpEnd); (4.77213541666667 : 4.875 : JumpStart); (4.93880208333333 : 4.875 : JumpEnd); (5.37760416666667 : 4.875 : JumpStart); (5.54427083333333 : 4.875 : JumpEnd); (5.763671875 : 4.875); (5.763671875 : 2.7)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/FORMAS_PAGO/FORMAS_PAGO_PEDIDOSV" />
+      <nodes>
+        <classShapeMoniker Id="05248480-c3cf-4254-a17c-4a18e654539a" />
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 5.26728846153846); (2.79166666666667 : 5.26728846153846 : JumpStart); (3.03645833333333 : 5.26728846153846 : JumpEnd); (4.04166666666667 : 5.26728846153846 : JumpStart); (4.20833333333333 : 5.26728846153846 : JumpEnd); (4.375 : 5.26728846153846)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PedidosDBDataContext/FORMAS_PAGO/FORMAS_PAGO_CLIENTES" />
+      <nodes>
+        <classShapeMoniker Id="05248480-c3cf-4254-a17c-4a18e654539a" />
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5 : 5.25); (1.5 : 3.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/FORMAS_PAGO/FORMAS_PAGO_PERSONAL" />
+      <nodes>
+        <classShapeMoniker Id="05248480-c3cf-4254-a17c-4a18e654539a" />
+        <classShapeMoniker Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="42cafd3d-0840-4d99-88a9-aec5bbd738f6" isExpanded="false" absoluteBounds="0.875, 5.875, 1.625, 0.45">
+      <DataClassMoniker Name="/PedidosDBDataContext/TIPOS_PORTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d87f59cc-6128-4944-b637-d2e9c811b3c4" absoluteBounds="0.89, 6.335, 1.5950000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 6.1); (4.125 : 6.1); (4.125 : 3.075); (4.37564854166667 : 3.075 : JumpStart); (4.54231520833333 : 3.075 : JumpEnd); (4.77213541666667 : 3.075 : JumpStart); (4.93880208333333 : 3.075 : JumpEnd); (5.07486979166667 : 3.075 : JumpStart); (5.24153645833333 : 3.075 : JumpEnd); (5.37760416666667 : 3.075 : JumpStart); (5.54427083333333 : 3.075 : JumpEnd); (5.68033854166667 : 3.075 : JumpStart); (5.84700520833333 : 3.075 : JumpEnd); (5.98307291666667 : 3.075 : JumpStart); (6.14973958333333 : 3.075 : JumpEnd); (6.28580729166667 : 3.075 : JumpStart); (6.45247395833333 : 3.075 : JumpEnd); (6.58854166666667 : 3.075 : JumpStart); (6.75520833333333 : 3.075 : JumpEnd); (6.81510666666667 : 3.075 : JumpStart); (6.98177333333333 : 3.075 : JumpEnd); (7.08594075 : 3.075); (7.08594075 : 2.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/TIPOS_PORTE/TIPOS_PORTE_PEDIDOSV" />
+      <nodes>
+        <classShapeMoniker Id="42cafd3d-0840-4d99-88a9-aec5bbd738f6" />
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 6.1374995); (4.41666666666667 : 6.1374995 : JumpStart); (4.58333333333333 : 6.1374995 : JumpEnd); (6.77071153846154 : 6.1374995); (6.77071153846154 : 5.7)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PedidosDBDataContext/TIPOS_PORTE/TIPOS_PORTE_CLIENTES" />
+      <nodes>
+        <classShapeMoniker Id="42cafd3d-0840-4d99-88a9-aec5bbd738f6" />
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3faf3e32-b37f-4867-9b13-633f006aa6c3" isExpanded="false" absoluteBounds="4.375, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/PedidosDBDataContext/ARTICULOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa7d8d08-f0cb-4353-ad2e-1c3212bde36a" absoluteBounds="4.39, 0.96, 1.9700000000000002, 8.7106526692708321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.3437475 : 0.95); (5.3437475 : 2.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/ARTICULOS/ARTICULOS_PEDIDOSV" />
+      <nodes>
+        <classShapeMoniker Id="3faf3e32-b37f-4867-9b13-633f006aa6c3" />
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="936e65a6-7b49-4e9f-a1b8-2186d1c68abc" isExpanded="false" absoluteBounds="7.5, 6.375, 1.25, 0.45">
+      <DataClassMoniker Name="/PedidosDBDataContext/PAISES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f32fb1e-3c0b-42c5-ba97-f7f411a0801f" absoluteBounds="7.515, 6.835, 1.2200000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.5 : 6.375); (7.25 : 5.7)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PedidosDBDataContext/PAISES/PAISES_CLIENTES" />
+      <nodes>
+        <classShapeMoniker Id="936e65a6-7b49-4e9f-a1b8-2186d1c68abc" />
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 6.5000025); (4.58333333333333 : 6.5000025 : JumpStart); (4.41666666666667 : 6.5000025 : JumpEnd); (0.872397083333333 : 6.5000025 : JumpStart); (0.682294166666667 : 6.5000025 : JumpEnd); (0.65625 : 6.5000025); (0.65625 : 3.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/PAISES/PAISES_PERSONAL" />
+      <nodes>
+        <classShapeMoniker Id="936e65a6-7b49-4e9f-a1b8-2186d1c68abc" />
+        <classShapeMoniker Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d25bc222-afff-446e-b131-cade70104545" isExpanded="false" absoluteBounds="7.875, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/PedidosDBDataContext/DOCUMENTOS_ESTADOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="35d766e7-c1dc-409a-af1b-4cc699bcdb50" absoluteBounds="7.8900000000000006, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.875 : 0.95); (7.5 : 1.325); (7.5 : 1.9125); (7.125 : 2.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PedidosDBDataContext/DOCUMENTOS_ESTADOS/DOCUMENTOS_ESTADOS_PEDIDOSV" />
+      <nodes>
+        <classShapeMoniker Id="d25bc222-afff-446e-b131-cade70104545" />
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="782febb4-1dcc-4e39-82e0-1d861f2aa049" isExpanded="false" absoluteBounds="3.25, 6.625, 1.375, 0.45">
+      <DataClassMoniker Name="/PedidosDBDataContext/CLIENTE_BLOQUEO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1a4ed51-9f7c-42bf-9d5b-49a06ad363bb" absoluteBounds="3.265, 7.085, 1.3450000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 5.7); (4.5 : 6.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PedidosDBDataContext/CLIENTES/CLIENTES_CLIENTE_BLOQUEO" />
+      <nodes>
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+        <classShapeMoniker Id="782febb4-1dcc-4e39-82e0-1d861f2aa049" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ce6e3640-eec8-4445-a5a2-fb3c484ce8fe" absoluteBounds="10.625, 1.75, 2.875, 6.7707340494791648">
+      <DataClassMoniker Name="/PedidosDBDataContext/REGISTROLAB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a7886de-4131-41ff-8618-727c30905477" absoluteBounds="10.64, 2.21, 2.8449999999999998, 6.2107340494791661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.375 : 0.95); (6.75 : 1.325); (8.44791916666667 : 1.325 : JumpStart); (8.61458583333333 : 1.325 : JumpEnd); (9.44791666666667 : 1.325 : JumpStart); (9.61458333333333 : 1.325 : JumpEnd); (12.0625 : 1.325); (12.0625 : 1.75)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/ARTICULOS/ARTICULOS_REGISTROLAB" />
+      <nodes>
+        <classShapeMoniker Id="3faf3e32-b37f-4867-9b13-633f006aa6c3" />
+        <classShapeMoniker Id="ce6e3640-eec8-4445-a5a2-fb3c484ce8fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 5.4437475); (10.625 : 5.4437475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PedidosDBDataContext/CLIENTES/CLIENTES_REGISTROLAB" />
+      <nodes>
+        <classShapeMoniker Id="4860f44b-aa7f-4bdf-9cf3-dce98abf92df" />
+        <classShapeMoniker Id="ce6e3640-eec8-4445-a5a2-fb3c484ce8fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.53125 : 0.95); (9.53125 : 4.57187125); (10.625 : 4.57187125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/DOCUMENTOS_ESTADOS/DOCUMENTOS_ESTADOS_REGISTROLAB" />
+      <nodes>
+        <classShapeMoniker Id="d25bc222-afff-446e-b131-cade70104545" />
+        <classShapeMoniker Id="ce6e3640-eec8-4445-a5a2-fb3c484ce8fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.125 : 2.5062525); (8.44791916666667 : 2.5062525 : JumpStart); (8.61458583333333 : 2.5062525 : JumpEnd); (9.44791666666667 : 2.5062525 : JumpStart); (9.61458333333333 : 2.5062525 : JumpEnd); (10.625 : 2.5062525)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/PEDIDOSV/PEDIDOSV_REGISTROLAB" />
+      <nodes>
+        <classShapeMoniker Id="247988f0-d568-4c1c-bd43-07027d178891" />
+        <classShapeMoniker Id="ce6e3640-eec8-4445-a5a2-fb3c484ce8fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.7656275 : 3.7); (0.7656275 : 7.82911702473958); (10.625 : 7.82911702473958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/PERSONAL/PERSONAL_REGISTROLAB" />
+      <nodes>
+        <classShapeMoniker Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" />
+        <classShapeMoniker Id="ce6e3640-eec8-4445-a5a2-fb3c484ce8fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.5468725 : 3.7); (0.5468725 : 7.45205601236979); (0.682294166666667 : 7.45205601236979 : JumpStart); (0.872397083333333 : 7.45205601236979 : JumpEnd); (10.625 : 7.45205601236979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/PERSONAL/PERSONAL_REGISTROLAB1" />
+      <nodes>
+        <classShapeMoniker Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" />
+        <classShapeMoniker Id="ce6e3640-eec8-4445-a5a2-fb3c484ce8fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.78906375 : 3.7); (0.78906375 : 8.20617803710937); (10.625 : 8.20617803710937)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/PERSONAL/PERSONAL_REGISTROLAB2" />
+      <nodes>
+        <classShapeMoniker Id="a2a76b93-58d6-41a4-9766-1f23c75cb3c9" />
+        <classShapeMoniker Id="ce6e3640-eec8-4445-a5a2-fb3c484ce8fe" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="86b76943-3d3f-44e8-956e-3a90af273162" isExpanded="false" absoluteBounds="10.375, 0.5, 1.25, 0.45">
+      <DataClassMoniker Name="/PedidosDBDataContext/USUARIOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13e8fc0b-4769-4db6-aa44-4da7fd872e6b" absoluteBounds="10.39, 0.96, 1.2200000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="25dc709f-6d43-4772-add7-3e88f61f9d50" isExpanded="false" absoluteBounds="7.125, 3.25, 2, 0.45">
+      <DataClassMoniker Name="/PedidosDBDataContext/DOCUMENTOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="24378006-80b3-45f6-930d-078d379e846e" absoluteBounds="7.1400000000000006, 3.71, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5312525 : 3.25); (8.5312525 : 0.95)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/DOCUMENTOS/DOCUMENTOS_DOCUMENTOS_ESTADOS" />
+      <nodes>
+        <classShapeMoniker Id="25dc709f-6d43-4772-add7-3e88f61f9d50" />
+        <classShapeMoniker Id="d25bc222-afff-446e-b131-cade70104545" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.80919230769231 : 3.7); (7.80919230769231 : 3.95); (8.45584615384615 : 3.95); (8.45584615384615 : 3.7)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PedidosDBDataContext/DOCUMENTOS/DOCUMENTOS_DOCUMENTOS" />
+      <nodes>
+        <classShapeMoniker Id="25dc709f-6d43-4772-add7-3e88f61f9d50" />
+        <classShapeMoniker Id="25dc709f-6d43-4772-add7-3e88f61f9d50" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cc7301ab-54dd-4bd0-8989-daebb164fe9f" isExpanded="false" absoluteBounds="13.875, 2.5, 1.5, 0.45">
+      <DataClassMoniker Name="/PedidosDBDataContext/NIVEL_URGENCIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8ad4844-fd14-4355-8662-493c64114f71" absoluteBounds="13.89, 2.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.875 : 2.725); (13.5 : 2.725)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PedidosDBDataContext/NIVEL_URGENCIA/NIVEL_URGENCIA_REGISTROLAB" />
+      <nodes>
+        <classShapeMoniker Id="cc7301ab-54dd-4bd0-8989-daebb164fe9f" />
+        <classShapeMoniker Id="ce6e3640-eec8-4445-a5a2-fb3c484ce8fe" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

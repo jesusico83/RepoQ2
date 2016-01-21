@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="local" Class="AlertasClienteDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=INFORMATICA02\SQLSRV2008;Initial Catalog=local;Integrated Security=True" SettingsObjectName="Auxiliares.Properties.Settings" SettingsPropertyName="localConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.Q2_ALERTAS_CLIENTE" Method="Q2_ALERTAS_CLIENTE">
+    <Parameter Name="FECHA" Parameter="fECHA" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="CLIE_ID" Parameter="cLIE_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DOCU_ID" Parameter="dOCU_ID" Type="System.String" DbType="VarChar(6)" />
+    <ElementType Name="Q2_ALERTAS_CLIENTEResult">
+      <Column Name="PRMS_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRMS_FECHAD" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PRMS_FECHAH" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MENS_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRMS_AMPLIACION" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DOCU_ID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="MENS_MENSAJE" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="MENS_DESCRIPCION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MENS_TIPO" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MENS_SONORO" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>
