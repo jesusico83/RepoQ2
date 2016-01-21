@@ -489,7 +489,7 @@
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.LinkArea = new System.Windows.Forms.LinkArea(0, 0);
             this.linkLabel2.LinkColor = System.Drawing.Color.MidnightBlue;
-            this.linkLabel2.Location = new System.Drawing.Point(273, 17);
+            this.linkLabel2.Location = new System.Drawing.Point(269, 17);
             this.linkLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(87, 20);
@@ -515,7 +515,7 @@
             this.dtpREGLAB_HORAMAXIMA.CustomFormat = "dd-MM-yy";
             this.dtpREGLAB_HORAMAXIMA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpREGLAB_HORAMAXIMA.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpREGLAB_HORAMAXIMA.Location = new System.Drawing.Point(360, 13);
+            this.dtpREGLAB_HORAMAXIMA.Location = new System.Drawing.Point(359, 13);
             this.dtpREGLAB_HORAMAXIMA.Margin = new System.Windows.Forms.Padding(2);
             this.dtpREGLAB_HORAMAXIMA.Name = "dtpREGLAB_HORAMAXIMA";
             this.dtpREGLAB_HORAMAXIMA.ShowCheckBox = true;
